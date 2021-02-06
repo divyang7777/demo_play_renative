@@ -17,6 +17,7 @@
         "@react-navigation/web": "1.0.0-alpha.9",
         "detox": "17.8.0",
         "hash-source": "1.0.4",
+        "moment": "^2.29.1",
         "react": "16.13.1",
         "react-art": "16.13.1",
         "react-dom": "16.13.1",
