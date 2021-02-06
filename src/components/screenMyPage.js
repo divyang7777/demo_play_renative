@@ -37,6 +37,10 @@ const ScreenMyPage = (props) => {
                 </TouchableOpacity>
             </> :
                 <>
+                    <video id="video" src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+                        width='100%' height="auto" poster="https://satsang.dadabhagwan.org/assets/img/video.svg"
+                        preload="auto" autoPlay={true}  controls loop>
+                    </video>
                     {/* <Video source={{ uri: 'https://youtu.be/5W4yzUeL8cE?t=385' }}   // Can be a URL or a local file.
                         ref={(ref) => {
                             console.log(ref);

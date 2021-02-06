@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import React, { useEffect } from 'react';
-import { Text, View } from 'react-native';
+import { Linking, Text, View } from 'react-native';
 import { Icon, Button, getScaledValue, useNavigate, useOpenDrawer, StyleSheet } from 'renative';
 import { initNavigation, withFocusable } from '@noriginmedia/react-spatial-navigation';
 import Theme, { themeStyles, hasHorizontalMenu, hasWebFocusableUI, ROUTES } from '../config';
@@ -71,9 +71,9 @@ const Menu = (props) => {
     return (
         <View style={styles.container}>
             <Text style={themeStyles.text}>
-Menu
+{/* Menu */}
             </Text>
-            <Button
+            {/* <Button
                 // to={ROUTES.HOME}
                 title="Home"
                 iconFont="ionicons"
@@ -89,7 +89,7 @@ Menu
                 onEnterPress={() => {
                     navigate(ROUTES.HOME, '/');
                 }}
-            />
+            /> */}
             <Button
                 title="Watch TV"
                 iconFont="ionicons"
@@ -100,10 +100,10 @@ Menu
                 style={styles.button}
                 textStyle={styles.buttonText}
                 onPress={() => {
-                    navigate(ROUTES.MY_PAGE, '/[slug]');
+                    navigate(ROUTES.HOME, '/');
                 }}
                 onEnterPress={() => {
-                    navigate(ROUTES.MY_PAGE, '/[slug]');
+                    navigate(ROUTES.HOME, '/');
                 }}
             />
             <Button
@@ -117,10 +117,12 @@ Menu
                 style={styles.button}
                 textStyle={styles.buttonText}
                 onPress={() => {
-                    navigate(ROUTES.MODAL, '/[slug]');
+                    // navigate(ROUTES.MODAL, '/[slug]');
+                    Linking.openURL('https://youtu.be/wuYWKuNogOI')
                 }}
                 onEnterPress={() => {
-                    navigate(ROUTES.MODAL, '/[slug]');
+                    Linking.openURL('https://youtu.be/wuYWKuNogOI')
+                    // navigate(ROUTES.MODAL, '/[slug]');
                 }}
             />
         </View>

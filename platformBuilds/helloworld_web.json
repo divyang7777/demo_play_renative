@@ -1,16 +1,16 @@
 {
     "_meta": {
-        "generated": 1612464665165,
+        "generated": 1612587474747,
         "mergedConfigs": [
             "/home/divyang/.rnv/renative.json",
-            "/home/divyang/renative_projects/demo_play/node_modules/rnv/projectTemplates/renative.templates.json",
-            "/home/divyang/renative_projects/demo_play/node_modules/rnv/pluginTemplates/renative.plugins.json",
+            "/usr/local/lib/node_modules/rnv/projectTemplates/renative.templates.json",
+            "/usr/local/lib/node_modules/rnv/pluginTemplates/renative.plugins.json",
             "/home/divyang/.rnv/renative.json",
-            "/home/divyang/renative_projects/demo_play/renative.json",
-            "/home/divyang/renative_projects/demo_play/renative.local.json",
-            "/home/divyang/renative_projects/demo_play/appConfigs/base/renative.json",
-            "/home/divyang/renative_projects/demo_play/appConfigs/base/renative.json",
-            "/home/divyang/renative_projects/demo_play/appConfigs/helloworld/renative.json"
+            "/home/divyang/renative_projects/demo_play_renative/renative.json",
+            "/home/divyang/renative_projects/demo_play_renative/renative.local.json",
+            "/home/divyang/renative_projects/demo_play_renative/appConfigs/base/renative.json",
+            "/home/divyang/renative_projects/demo_play_renative/appConfigs/base/renative.json",
+            "/home/divyang/renative_projects/demo_play_renative/appConfigs/helloworld/renative.json"
         ],
         "requiresJetify": true,
         "currentAppConfigId": "helloworld"
@@ -3130,7 +3130,7 @@
                     "BuildGradle": {
                         "allprojects": {
                             "repositories": {
-                                " maven { url \"/home/divyang/renative_projects/demo_play/node_modules/detox/Detox-android\" }": true
+                                " maven { url \"/home/divyang/renative_projects/demo_play_renative/node_modules/detox/Detox-android\" }": true
                             }
                         }
                     }

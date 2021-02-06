@@ -19,8 +19,7 @@ const App = () => {
             <Menu focusKey="menu" navigate={navigate} />
             <View style={themeStyles.appContainer}>
                 <Router>
-                    <ScreenHome path="/" />
-                    <ScreenMyPage path="my-page" />
+                    <ScreenMyPage path="/" />
                     <ScreenModal path="modal" />
                 </Router>
             </View>

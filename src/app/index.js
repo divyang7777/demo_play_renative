@@ -38,6 +38,7 @@ const StackNavigator = ({ navigation }) => (
             headerTintColor: Theme.color3
         }}
     >
+        <Stack.Screen name="my-page" component={ScreenMyPage} />
         <Stack.Screen
             name="home"
             component={ScreenHome}
@@ -48,7 +49,6 @@ const StackNavigator = ({ navigation }) => (
                 )
             }}
         />
-        <Stack.Screen name="my-page" component={ScreenMyPage} />
     </Stack.Navigator>
 );
 
