@@ -23,17 +23,15 @@ const ScreenMyPage = (props) => {
         await fetch(`https://dbapi.dadabhagwan.org/api/tv/curtvprogram?curtime=${moment().format('kk:mm:ss')}&curdate=${moment().format('DD/MM/YYYY kk:mm:ss')}&channel=58&daytransition=0&liveflag=0`)
             .then((response) => response.json())
             .then(async (res) => {
-                // let isYoutubeLink = res.result["curtvprogram"][0].YOUTUBE_EMBED_CODE
-                // let isVimeoLink = res.result["curtvprogram"][0].EMBED_CODE
-                // let youtubeLink = isYoutubeLink && res.result["curtvprogram"][0].YOUTUBE_EMBED_CODE.split('src="')[1].split('" ')[0]
-                let youtubeLink = res.result.curtvprogram[0].VIDEO_URL
-                // let vimeoLink = isVimeoLink && res.result["curtvprogram"][0].EMBED_CODE.split('src="')[1].split('" ')[0]
+                let isYoutubeLink = res.result.curtvprogram[0].VIDEO_URL.includes('youtube')
+                let videoLink = res.result.curtvprogram[0].VIDEO_URL
+
                 const momentVale = moment().format()
-                // static code ---> video start at 3:55
                 const timeDifference = moment().diff(momentVale.split('T')[0] + `T${res.result.curtvprogram[0].FROMTIME}`, 'seconds')
-                youtubeLink = youtubeLink.split('&start=').join(`&start=${timeDifference}`)
-                // await setEmbedURL(isYoutubeLink ? youtubeLink : vimeoLink)
-                await setEmbedURL(res.result.curtvprogram[0].VIDEO_URL)
+
+                videoLink = isYoutubeLink ? videoLink + `?start=${timeDifference}&modestbranding=1&autoplay=1&enablejsapi=1` : videoLink + `?t=${timeDifference}&autoplay=1`
+
+                await setEmbedURL(videoLink)
             })
             .catch((error) => {
                 console.error(error);
